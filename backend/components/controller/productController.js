@@ -163,10 +163,10 @@ const combineData = async(req,res) => {
 
     try {
         const [transactionsResponse, statisticsResponse, barChartResponse, pieChartResponse] = await Promise.all([
-            axios.get(`http://localhost:5000/api/product/transaction?month=${month}`),
-            axios.get(`http://localhost:5000/api/product/statistics?month=${month}`),
-            axios.get(`http://localhost:5000/api/product/barchart?month=${month}`),
-            axios.get(`http://localhost:5000/api/product/piechart?month=${month}`)
+            axios.get(`https://product-info-backend.onrender.com/api/product/transaction?month=${month}`),
+            axios.get(`https://product-info-backend.onrender.com/api/product/statistics?month=${month}`),
+            axios.get(`https://product-info-backend.onrender.com/api/product/barchart?month=${month}`),
+            axios.get(`https://product-info-backend.onrender.com/api/product/piechart?month=${month}`)
         ]);
 
         res.json({
